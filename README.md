@@ -33,5 +33,5 @@ Créer différents algorithmes qui vont afficher les actions les plus rentables 
 
 ### Utilisation du programme
 Pas grand chose à faire, en fait.
-Pour l'algo "bruteforce", il y a juste à le lancer et patienter, les résultats s'afficheront une fois le rendu terminé. Ne traite QUE le fichier des 20 actions.
-Pour les deux algo optimisés, un menu vous sera proposé via lequel vous pourrez choisir quel fichier traiter (celui de 20 actions, dataset1, dataset2 et même dataset3 qui est une fusion des 2 précédents).
+- Pour l'algo "bruteforce", il y a juste à le lancer et patienter, les résultats s'afficheront une fois le rendu terminé. Ne traite QUE le fichier des 20 actions.
+- Pour les deux algo optimisés, un menu vous sera proposé via lequel vous pourrez choisir quel fichier traiter (celui de 20 actions, dataset1, dataset2 et même dataset3 qui est une fusion des 2 précédents).
