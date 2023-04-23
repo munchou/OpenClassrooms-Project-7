@@ -20,13 +20,12 @@ def main():
 
     print("\nSelecting the best shares for the budget:")
     selected_combinations, final_profits = shares_profits(all_combinations)
-    # print(f"selected_combinations {selected_combinations}")
 
     final_result(selected_combinations, final_profits)
 
 
 def load_data():
-    """Retrieves and load the data from the CSV file."""
+    """Retrieves and loads the data from the CSV file."""
     shares_data = []
 
     with open("data_files/shares01.csv") as csvfile:
@@ -53,9 +52,6 @@ def make_combinations(shares_data):
     of which their cost matches the budget."""
     final_list = []
 
-    # print(f"LEN {len(shares_data)}")
-    # print(f"RANGE {range(len(shares_data))}")
-
     for elements in tqdm(range(len(shares_data))):
         all_combinations = combinations(shares_data, elements)
 
@@ -73,10 +69,8 @@ def shares_profits(selected_list):
     final_profits = 0
 
     for shares in tqdm(selected_list):
-        # print(f"SHARES: {shares}")
         combination_profits = []
         for share in shares:
-            # print(f"share: {share}")
             profits = share[1] * share[2] / 100
             combination_profits.append(profits)
             item_profits = sum(combination_profits)
@@ -104,6 +98,9 @@ def final_result(final_list, final_profits):
 
     print(
         f"\nIt would cost you {round(total_cost, 2)}€ and return you {round(final_profits, 2)}€."
+    )
+    print(
+        f"Final profits: {round(((final_profits*100)/total_cost), 2)}% of your original investment."
     )
     print(f"\nTime elapsed : {round((time.time() - start_time), 6)} seconds.")
 

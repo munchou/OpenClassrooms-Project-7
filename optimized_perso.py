@@ -1,6 +1,5 @@
 import time
 import csv
-from itertools import combinations
 import os
 import psutil
 
@@ -54,7 +53,6 @@ def load_data(file):
 
     shares_data = []
 
-    # with open("dataset1_Python+P7.csv") as csvfile:
     with open(file) as csvfile:
         shares_file = csv.reader(csvfile)
 
@@ -73,6 +71,7 @@ def removebadshares(shares):
         if share[1] > 0 and share[2] > 0:
             shares_to_keep.append(share)
 
+    print(f"* * * Number of USABLE shares: {len(shares_to_keep)}")
     return shares_to_keep
 
 

@@ -23,6 +23,7 @@ def main():
 
 
 def pick_a_file():
+    """Menu to choose the file the user wants to load."""
     while True:
         print("Choose which file you would like to use:")
         print("1. 20 shares")
@@ -49,7 +50,7 @@ def pick_a_file():
 
 
 def load_data(file):
-    """Retrieves and load the data from the CSV file."""
+    """Retrieves and loads the data from the CSV file."""
     start_time = time.time()
     print("* " * 25)
     print(f"LOADED FILE: {file[11:]}")
@@ -80,6 +81,7 @@ def load_data(file):
 
 
 def knapsack(budget, shares):
+    """knapsack alogorithm"""
     # The share's cost (share_cost) CANNOT be a float as it is used
     # as an index for the table (or else "TypeError").
 
